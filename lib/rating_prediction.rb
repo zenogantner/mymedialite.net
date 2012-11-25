@@ -1,0 +1,1 @@
+../../MyMediaLite/examples/ruby/rating_prediction.rb

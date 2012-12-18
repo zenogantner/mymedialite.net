@@ -1,9 +1,9 @@
-MyMediaLite item recommendation from positive-only feedback 3.05
+MyMediaLite item recommendation from positive-only feedback 3.06
 
  usage:   item_recommendation --training-file=FILE --recommender=METHOD [OPTIONS]
 
    methods (plus arguments and their defaults):
-   - BPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05 uniform_user_sampling=True with_replacement=False fast_sampling_memory_limit=1024 update_j=True
+   - BPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05 uniform_user_sampling=True with_replacement=False update_j=True
        supports --find-iter=N, --online-evaluation
    - ItemAttributeKNN k=80 correlation=Cosine q=1 weighted=False alpha=0.5 (only for BidirectionalConditionalProbability)
        needs --item-attributes=FILE
@@ -17,9 +17,9 @@ MyMediaLite item recommendation from positive-only feedback 3.05
    - WRMF num_factors=10 regularization=0.015 alpha=1 num_iter=15
        supports --find-iter=N, --online-evaluation
    - Zero
-   - MultiCoreBPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05 uniform_user_sampling=True with_replacement=False fast_sampling_memory_limit=1024 update_j=True max_threads=100
+   - MultiCoreBPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05 uniform_user_sampling=False with_replacement=False update_j=True max_threads=100
        supports --find-iter=N, --online-evaluation
-   - SoftMarginRankingMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.1 fast_sampling_memory_limit=1024
+   - SoftMarginRankingMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.1 uniform_user_sampling=True with_replacement=False update_j=True
        supports --find-iter=N, --online-evaluation
    - WeightedBPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05
        supports --find-iter=N, --online-evaluation
@@ -91,12 +91,12 @@ MyMediaLite item recommendation from positive-only feedback 3.05
    --num-test-users=N           evaluate on only N randomly picked users (to save time)
    --online-evaluation          perform online evaluation (use every tested user-item combination for incremental training)
    --compute-fit                display fit on training data
+   --measures=LIST              the evaluation measures to display (default is AUC, prec@5)
 
   finding the right number of iterations (iterative methods)
    --find-iter=N                give out statistics every N iterations
    --num-iter=N                 start measuring at N iterations
    --max-iter=N                 perform at most N iterations
-   --measure=MEASURE            the evaluation measure to use for the abort conditions below (default is AUC)
-   --epsilon=NUM                abort iterations if MEASURE is less than best result plus NUM
-   --cutoff=NUM                 abort if MEASURE is below NUM
+   --epsilon=NUM                abort iterations if main measure is less than best result plus NUM
+   --cutoff=NUM                 abort if main measure is below NUM
 

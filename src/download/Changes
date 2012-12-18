@@ -1,7 +1,62 @@
+3.06	2012-12-18
+	recommenders
+	 - CLiMF: add warning that it is not finished yet
+	 - BiasedMatrixFactorization, (Sigmoid)SVDPlusPlus:
+           - fix learn rate decay
+           - fix System.ArgumentOutOfRangeException in FoldIn() (reported by
+             Greg Najda)
+	 - SigmoidCombinedAsymmetricFactorModel:
+           - implement fold-in
+           - fix potential NullReferenceException in Train()
+	 - UserKNN for item recommendation: add fold-in support
+	 - UserKNN and ItemKNN for item recommendation: fix prediction bug -
+           wrong scoring and potential exception if k=inf
+	 - BPRMF, MultiCoreBPRMF, SoftMarginRankinMF:
+           - #353: get rid of 'fast sampling' feature
+	 - MultiCoreBPRMF
+	   - fix multithreading behavior for WithReplacement=false and
+             UniformUserSampling=false (thanks to Alex V. for the help)
+	 - BPRMF:
+	   - move different sampling strategies into different protected
+             methods
+	   - improve documentation, add formula for optimization problem
+	 - SoftMarginRankingMF:
+	   - show all relevant options in ToString()
+	 - WeightedBPRMF
+           - fix sampling corner case (last element was ignored)
+	   - set WithReplacement = false and UniformUserSampling = true in
+             constructor
+	 - SocialMF
+	   - fix NRE when UserRelation is not set
+	   - more flexible Iterate() method
+         - do not check for negative user/item IDs any more - this would be
+           caught anyway by other means
+	 - add more unit tests for rating prediction methods
+	data types
+	 - (Sparse)Matrix: implement IsSymmetric according to interface
+           specification
+	command-line tools
+	 - #337: use Mono's default garbage collector
+	 - #301: reduce measurement output, let user select which measures to
+           display
+	documentation
+	 - refer to new website: http://mymedialite.net
+	website
+	 - add disclaimer to FAQ
+	 - move website into its own repository
+	misc
+	 - UnhandledExceptionHandler: fix output formatting
+	 - Makefile: use variable ACK for ack/ack-grep
+	 - run all system tests with make target 'test'
+	 - MultiCore helper class
+	   - add unit tests
+	   - fix behavior when there are less tasks to divide than threads
+	   - method PartitionIndices() returns IList instead of an array
+
 3.05	2012-10-23
 	recommenders
-	 - new item recommenders: BPRSLIM and LeastSquareSLIM (by Lucas
-           Drumond)
+	 - new item recommenders: BPRSLIM (#120)  and LeastSquareSLIM (#118)
+           (by Lucas Drumond)
 	 - MatrixFactorization: fix bug related to the learn rate decay
            introduced in the last release (reported by Lucas Drumond and Josif
            Grabocka)
@@ -54,7 +109,7 @@
  	 - add some papers that use MyMediaLite
 	 - add list of organizations that use MyMediaLite
 	misc:
-	 - Makefile: call ack-grep instead of ack
+	 - #90: Makefile: call ack-grep instead of ack
 
 3.03	2012-09-09
 	API

@@ -1,4 +1,4 @@
-MyMediaLite rating prediction 3.05
+MyMediaLite rating prediction 3.06
 
  usage:  rating_prediction --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -99,12 +99,12 @@ MyMediaLite rating prediction 3.05
    --online-evaluation                 perform online evaluation (use every tested rating for incremental training)
    --search-hp                         search for good hyperparameter values (experimental feature)
    --compute-fit                       display fit on training data
+   --measures=RMSE,MAE,NMAE,CBD        comma- or space-separated list of evaluation measures to display (default is RMSE, MAE, CBD)
 
   options for finding the right number of iterations (iterative methods)
    --find-iter=N                  give out statistics every N iterations
    --num-iter=N                   start measuring at N iterations
    --max-iter=N                   perform at most N iterations
-   --measure=RMSE|MAE|NMAE|CBD    evaluation measure to use for the abort conditions below (default is RMSE)
-   --epsilon=NUM                  abort iterations if evaluation measure is more than best result plus NUM
-   --cutoff=NUM                   abort if evaluation measure is above NUM
+   --epsilon=NUM                  abort iterations if main evaluation measure is more than best result plus NUM
+   --cutoff=NUM                   abort if main evaluation measure is above NUM
 

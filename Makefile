@@ -1,6 +1,3 @@
-EDITOR=editor
-VERSION=3.05
-
 all: website
 
 website:

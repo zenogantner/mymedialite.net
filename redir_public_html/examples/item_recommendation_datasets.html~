@@ -1,0 +1,254 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>MyMediaLite: Example Experiments</title>
+  <!-- Google +1 -->
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+</head>
+<body>
+
+<!-- GitHub ribbon -->
+<a href="https://github.com/zenogantner/MyMediaLite"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<h1><a href="index.html">MyMediaLite: Example Experiments</a></h1>
+
+
+<ul id="navigation">
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../features.html">Features</a></li>
+  <li><a href="../users.html">Users</a></li>
+  <li><a href="../download/index.html">Download</a></li>
+  <li><a href="../documentation/index.html">Documentation</a></li>
+  <li><a href="../examples/index.html">Examples</a></li>
+  <li><a href="../contribute.html">Contribute</a></li>
+  <li><a href="../links.html">Links</a></li>
+</ul>
+<div id="infobox">
+<h2><a href="../news/index.html">News</a></h2>
+<p>
+  <a href="../news/index.html#3.06">MyMediaLite 3.06 has been released.</a>
+</p>
+
+<br/>
+
+  <!-- Twitter -->
+  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+  <script>
+  new TWTR.Widget({
+    version: 2,
+    type: 'search',
+    search: 'mymedialite',
+    interval: 30000,
+    title: '',
+    subject: 'Recent Tweets ...',
+    width: 230,
+    height: 300,
+    theme: {
+      shell: {
+        background: '#8ec1da',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#ffffff',
+        color: '#444444',
+        links: '#1985b5'
+      }
+    },
+    features: {
+      scrollbar: false,
+      loop: true,
+      live: true,
+      behavior: 'default'
+    }
+  }).render().start();
+  </script>
+</div>
+
+
+<div id="content">
+  <h2>Datasets</h2>
+
+  Experimental results for some example datasets.
+  The given hyperparameters may not be the optimal ones.
+  
+  <!--
+  <a href="http://www.netflixprize.com/"><h3>Netflix</h3></a>
+  <p>
+    Results on the <it>probe</it> dataset:
+    <table border="1">
+      <tr> <th>Method</th> <th><tt>--recommender-options</tt></th> <th>AUC</th> <th>prec@5</th> <th>prec@10</th> <th>MAP</th> <th>recall@5</th> <th>recall@10</th> <th>NDCG</th> <th>mrr</th> </tr>
+              <tr> <td>MostPopular</td> <td><tt></tt></td> <td></td> <td></td> </tr>
+              <tr> <td>BPRMF</td> <td><tt></tt></td> <td></td> <td></td> </tr>
+              <tr> <td>WRMF</td> <td><tt></tt></td> <td></td> <td></td> </tr>
+          </table>
+  </p>
+  -->
+  
+  <a href="http://www.grouplens.org/node/73"><h3>MovieLens 1M</h3></a>
+  <p>
+    5-fold crossvalidation with <tt>--random-seed=1</tt>  
+    <table border="1">
+      <tr> <th>Method</th> <th><tt>--recommender-options</tt></th> <th>AUC</th> <th>prec@5</th> <th>prec@10</th> <th>MAP</th> <th>recall@5</th> <th>recall@10</th> <th>NDCG</th> <th>mrr</th> </tr>
+          </table>
+  </p>
+
+  <h3>MovieLens 100k</h3>
+  <p>
+    5-fold crossvalidation with <tt>--random-seed=1</tt>
+    <table border="1">
+      <tr> <th>Method</th> <th><tt>--recommender-options</tt></th> <th>AUC</th> <th>prec@5</th> <th>prec@10</th> <th>MAP</th> <th>recall@5</th> <th>recall@10</th> <th>NDCG</th> <th>mrr</th> </tr>
+            <tr>
+        <td>MostPopular</td> <td><tt></tt></td>
+        <td>0.8614</td>
+        <td>0.49268</td>
+        <td>0.46242</td>
+        <td>0.27751</td>
+        <td>0.04629</td>
+        <td>0.08681</td>
+        <td>0.68972</td>
+        <td>0.66143</td>
+      </tr>
+            <tr>
+        <td>ItemKNN</td> <td><tt>k=10 correlation=Cosine weighted=true</tt></td>
+        <td>0.94515</td>
+        <td>0.68704</td>
+        <td>0.66757</td>
+        <td>0.50448</td>
+        <td>0.07067</td>
+        <td>0.13626</td>
+        <td>0.81577</td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>ItemKNN</td> <td><tt>k=10 correlation=Jaccard weighted=true</tt></td>
+        <td>0.9441</td>
+        <td>0.67266</td>
+        <td>0.66257</td>
+        <td>0.50437</td>
+        <td>0.0689</td>
+        <td>0.1346</td>
+        <td>0.81339</td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>ItemKNN</td> <td><tt>k=10 correlation=Cooccurrence weighted=true</tt></td>
+        <td>0.92139</td>
+        <td>0.56085</td>
+        <td>0.57105</td>
+        <td>0.40292</td>
+        <td>0.05457</td>
+        <td>0.11373</td>
+        <td>0.75892</td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>ItemKNN</td> <td><tt>k=10 correlation=ConditionalProbability weighted=true</tt></td>
+        <td>0.79913</td>
+        <td>0.11461</td>
+        <td>0.13058</td>
+        <td>0.1737</td>
+        <td>0.01444</td>
+        <td>0.02928</td>
+        <td>0.57698</td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>UserKNN</td> <td><tt>k=10 correlation=Cosine weighted=true</tt></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>UserKNN</td> <td><tt>k=10 correlation=Jaccard weighted=true</tt></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>UserKNN</td> <td><tt>k=10 correlation=Cooccurrence weighted=true</tt></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>UserKNN</td> <td><tt>k=10 correlation=ConditionalProbability weighted=true</tt></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+            <tr>
+        <td>UserKNN</td> <td><tt>k=80</tt></td>
+        <td>0.94032</td>
+        <td>0.90231</td>
+        <td>0.83644</td>
+        <td>0.57747</td>
+        <td>0.10625</td>
+        <td>0.1888</td>
+        <td>0.87603</td>
+        <td>0.95808</td>
+      </tr>
+            <tr>
+        <td>WRMF</td> <td><tt></tt></td>
+        <td>0.94934</td>
+        <td>0.80322</td>
+        <td>0.74216</td>
+        <td>0.53847 </td>
+        <td>0.0873</td>
+        <td>0.15371</td>
+        <td>0.8468</td>
+        <td>0.87025</td>
+      </tr>
+            <tr>
+        <td>BPRMF</td> <td><tt></tt></td>
+        <td>0.9204</td>
+        <td>0.47451</td>
+        <td>0.42462</td>
+        <td>0.30543</td>
+        <td>0.0901</td>
+        <td>0.1566</td>
+        <td>0.66693</td>
+        <td>0.44003</td>
+      </tr>
+          </table>
+  </p>
+
+</div>
+
+<p id="bottom">
+  <g:plusone size="small" annotation="inline"></g:plusone>
+
+  <a href="../contact.html">Contact</a>
+  –
+  <a href="http://twitter.com/mymedialite">Follow us on Twitter</a>
+</p>
+
+</body></html>

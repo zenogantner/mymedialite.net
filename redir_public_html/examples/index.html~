@@ -1,0 +1,98 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <title>MyMediaLite: Examples</title>
+  <!-- Google +1 -->
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+</head>
+<body>
+
+<!-- GitHub ribbon -->
+<a href="https://github.com/zenogantner/MyMediaLite"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+<h1><a href="index.html">MyMediaLite: Examples</a></h1>
+
+
+<ul id="navigation">
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../features.html">Features</a></li>
+  <li><a href="../users.html">Users</a></li>
+  <li><a href="../download/index.html">Download</a></li>
+  <li><a href="../documentation/index.html">Documentation</a></li>
+  <li><a href="../examples/index.html">Examples</a></li>
+  <li><a href="../contribute.html">Contribute</a></li>
+  <li><a href="../links.html">Links</a></li>
+</ul>
+<div id="infobox">
+<h2><a href="../news/index.html">News</a></h2>
+<p>
+  <a href="../news/index.html#3.06">MyMediaLite 3.06 has been released.</a>
+</p>
+
+<br/>
+
+  <!-- Twitter -->
+  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+  <script>
+  new TWTR.Widget({
+    version: 2,
+    type: 'search',
+    search: 'mymedialite',
+    interval: 30000,
+    title: '',
+    subject: 'Recent Tweets ...',
+    width: 230,
+    height: 300,
+    theme: {
+      shell: {
+        background: '#8ec1da',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#ffffff',
+        color: '#444444',
+        links: '#1985b5'
+      }
+    },
+    features: {
+      scrollbar: false,
+      loop: true,
+      live: true,
+      behavior: 'default'
+    }
+  }).render().start();
+  </script>
+</div>
+
+<div id="content">
+  <h2>Examples</h2>
+  <p>
+   Some examples for using MyMediaLite:
+   <ul>
+     <li><a href="kddcup2011.html">using MyMediaLite for the KDD Cup 2011</a></li>
+     <li><a href="datasets.html">experimental results for different datasets (rating prediction)</a></li>
+     <li><a href="item_recommendation_datasets.html">experimental results for different datasets (item recommendation)</a></li>
+     <li><a href="research.html">academic research that uses MyMediaLite or its predecessor</a></li>
+     <li><a href="recsys2011.html">some experiments to show MyMediaLite's runtime behavior</a></li>
+   </ul>
+  </p>
+</div>
+
+<p id="bottom">
+  <g:plusone size="small" annotation="inline"></g:plusone>
+
+  <a href="../contact.html">Contact</a>
+  –
+  <a href="http://twitter.com/mymedialite">Follow us on Twitter</a>
+</p>
+
+</body></html>

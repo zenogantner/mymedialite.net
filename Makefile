@@ -5,7 +5,7 @@ website:
 
 clean:
 	rm -rf public_html/*
+	rm -rf redir_public_html/*
 
-copy-website: website
-	cp -r public_html/* ${HOMEPAGE}/mymedialite/
-
+redir:
+	ttree -s redir_src/ -d redir_public_html/ -c lib -l lib -r -f config --post_chomp -a

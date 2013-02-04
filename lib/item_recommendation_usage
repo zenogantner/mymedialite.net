@@ -1,4 +1,4 @@
-MyMediaLite item recommendation from positive-only feedback 3.06
+MyMediaLite item recommendation from positive-only feedback 3.07
 
  usage:   item_recommendation --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -7,13 +7,17 @@ MyMediaLite item recommendation from positive-only feedback 3.06
        supports --find-iter=N, --online-evaluation
    - ItemAttributeKNN k=80 correlation=Cosine q=1 weighted=False alpha=0.5 (only for BidirectionalConditionalProbability)
        needs --item-attributes=FILE
+       supports --online-evaluation
    - ItemKNN k=80 correlation=Cosine q=1 weighted=False alpha=0.5 (only for BidirectionalConditionalProbability)
+       supports --online-evaluation
    - MostPopular by_user=False
        supports --online-evaluation
    - Random
    - UserAttributeKNN k=80 correlation=Cosine q=1 weighted=False alpha=0.5 (only for BidirectionalConditionalProbability)
        needs --user-attributes=FILE
+       supports --online-evaluation
    - UserKNN k=80 correlation=Cosine q=1 weighted=False alpha=0.5 (only for BidirectionalConditionalProbability)
+       supports --online-evaluation
    - WRMF num_factors=10 regularization=0.015 alpha=1 num_iter=15
        supports --find-iter=N, --online-evaluation
    - Zero
@@ -39,11 +43,11 @@ MyMediaLite item recommendation from positive-only feedback 3.06
        supports --find-iter=N, --online-evaluation
    - LeastSquareSLIM reg_l1=0.01 reg_l2=0.001 num_iter=15 K=50
        supports --find-iter=N, --online-evaluation
+   - ExternalItemRecommender prediction_file=FILENAME
   method ARGUMENTS have the form name=value
 
   general OPTIONS:
    --recommender=METHOD             use METHOD for recommendations (default: MostPopular)
-   --group-recommender=METHOD       use METHOD to combine the predictions for several users
    --recommender-options=OPTIONS    use OPTIONS as recommender options
    --help                           display this usage information and exit
    --version                        display version information and exit
@@ -59,7 +63,6 @@ MyMediaLite item recommendation from positive-only feedback 3.06
    --item-attributes=FILE                   file with item attribute information, 1 tuple per line
    --user-relations=FILE                    file with user relation information, 1 tuple per line
    --item-relations=FILE                    file with item relation information, 1 tuple per line
-   --user-groups=FILE                       file with group-to-user mappings, 1 tuple per line
    --save-model=FILE                        save computed model to FILE
    --load-model=FILE                        load model from FILE
 

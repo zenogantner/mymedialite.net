@@ -13,6 +13,32 @@
 
 <div id="content">
 
+  <a name="3.07"><h2>MyMediaLite 3.07</h2></a>
+    <p>
+    <b>February 4, 2013</b>
+    Version 3.07 of MyMediaLite has been released today.
+    </p>
+    <p>Important changes:
+    <ul>
+      <li>new rating predictor GSVD++ (contributed by Marcelo Manzato)</li>
+      <li>new recommenders ExternalRatingPredictor and ExternalItemRecommender
+           to evaluate external tools with the MyMediaLite evaluation
+           framework</li>
+      <li>incremental update support for item recommendation UserKNN and ItemKNN
+          (based on a pull request by João Vinagre)</li>
+      <li><tt>--cross-validation</tt> support for the <tt>rating_based_ranking</tt> tool (as requested by Pieter-Jan Verbrugen)</li>
+      <li>removed the group recommendation code</li>
+      <li>cleaner item recommendation evaluation, with a bug fix in the cross-validation code and a complete rewrite of online evaluation</li>
+      <li>removed unused matrix and vector math, faster and simplified matrix code</li>
+    </ul>
+    </p>
+    <p>
+      More details can be found in the <a href="https://github.com/zenogantner/MyMediaLite/blob/master/doc/Changes">Changes file</a>.
+    </p>
+    <p>
+    <a href="[% prefix %]download/index.html">Download it.</a>
+    </p>
+
   <a name="3.06"><h2>MyMediaLite 3.06</h2></a>
     <p>
     <b>December 18, 2012</b>

@@ -1,4 +1,4 @@
-MyMediaLite rating prediction 3.06
+MyMediaLite rating prediction 3.07
 
  usage:  rating_prediction --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -57,6 +57,10 @@ MyMediaLite rating prediction 3.06
    - NaiveBayes class_smoothing=1 attribute_smoothing=1
        needs --item-attributes=FILE
        supports --online-evaluation
+   - ExternalRatingPredictor prediction_file=FILENAME
+   - GSVDPlusPlus num_factors=10 regularization=0.015 bias_reg=0.33 frequency_regularization=False learn_rate=0.001 bias_learn_rate=0.7 learn_rate_decay=1 num_iter=30
+       needs --item-attributes=FILE
+       supports --find-iter=N, --online-evaluation
   method ARGUMENTS have the form name=value
 
   general OPTIONS:

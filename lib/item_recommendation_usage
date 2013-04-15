@@ -1,4 +1,4 @@
-MyMediaLite item recommendation from positive-only feedback 3.07
+MyMediaLite item recommendation from positive-only feedback 3.08
 
  usage:   item_recommendation --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -27,19 +27,12 @@ MyMediaLite item recommendation from positive-only feedback 3.07
        supports --find-iter=N, --online-evaluation
    - WeightedBPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05
        supports --find-iter=N, --online-evaluation
-   - BPRLinear reg=0.015 num_iter=10 learn_rate=0.05 fast_sampling_memory_limit=1024
+   - BPRLinear reg=0.015 num_iter=10 learn_rate=0.05
        needs --item-attributes=FILE
        supports --find-iter=N
-   - ItemAttributeSVM c=1 gamma=0.002
-       needs --item-attributes=FILE
-   - BPRMF_Mapping num_factors=10 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05 reg_mapping=0.1 num_iter_mapping=10 learn_rate_mapping=0.01 init_mean=0 init_stddev=0.1
-       needs --user-attributes=FILE, --item-attributes=FILE
-       supports --find-iter=N, --online-evaluation
    - MostPopularByAttributes
        needs --item-attributes=FILE
-   - CLiMF num_factors=10 regularization=0 num_iter=30 learn_rate=0.01
-       supports --find-iter=N, --online-evaluation
-   - BPRSLIM reg_i=0.0025 reg_j=0.00025 num_iter=15 learn_rate=0.05 uniform_user_sampling=True with_replacement=False fast_sampling_memory_limit=1024 update_j=True
+   - BPRSLIM reg_i=0.0025 reg_j=0.00025 num_iter=15 learn_rate=0.05 uniform_user_sampling=True with_replacement=False update_j=True
        supports --find-iter=N, --online-evaluation
    - LeastSquareSLIM reg_l1=0.01 reg_l2=0.001 num_iter=15 K=50
        supports --find-iter=N, --online-evaluation
@@ -65,6 +58,10 @@ MyMediaLite item recommendation from positive-only feedback 3.07
    --item-relations=FILE                    file with item relation information, 1 tuple per line
    --save-model=FILE                        save computed model to FILE
    --load-model=FILE                        load model from FILE
+   --save-user-mapping=FILE                 save user ID mapping to FILE
+   --save-item-mapping=FILE                 save item ID mapping to FILE
+   --load-user-mapping=FILE                 load user ID mapping from FILE
+   --load-item-mapping=FILE                 load item ID mapping from FILE
 
   data interpretation:
    --user-prediction            transpose the user-item matrix and perform user prediction instead of item prediction
@@ -94,7 +91,8 @@ MyMediaLite item recommendation from positive-only feedback 3.07
    --num-test-users=N           evaluate on only N randomly picked users (to save time)
    --online-evaluation          perform online evaluation (use every tested user-item combination for incremental training)
    --compute-fit                display fit on training data
-   --measures=LIST              the evaluation measures to display (default is AUC, prec@5)
+   --measures=LIST              the evaluation measures to display (default is 'AUC, prec@5')
+                                use --help-measures to get a list of all available measures
 
   finding the right number of iterations (iterative methods)
    --find-iter=N                give out statistics every N iterations

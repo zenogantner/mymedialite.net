@@ -1,4 +1,4 @@
-MyMediaLite rating prediction 3.07
+MyMediaLite rating prediction 3.08
 
  usage:  rating_prediction --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -75,6 +75,8 @@ MyMediaLite rating prediction 3.07
   files:
    --training-file=FILE                   read training data from FILE
    --test-file=FILE                       read test data from FILE
+   --test-no-ratings                      test data contains no rating column
+                                          (needs both --prediction-file=FILE and --test-file=FILE)
    --file-format=movielens_1m|kddcup_2011|ignore_first_line|default
    --data-dir=DIR                         load all files from DIR
    --user-attributes=FILE                 file with user attribute information, 1 tuple per line
@@ -103,7 +105,8 @@ MyMediaLite rating prediction 3.07
    --online-evaluation                 perform online evaluation (use every tested rating for incremental training)
    --search-hp                         search for good hyperparameter values (experimental feature)
    --compute-fit                       display fit on training data
-   --measures=RMSE,MAE,NMAE,CBD        comma- or space-separated list of evaluation measures to display (default is RMSE, MAE, CBD)
+   --measures=LIST                     comma- or space-separated list of evaluation measures to display (default is RMSE, MAE, CBD)
+                                       use --help-measures to get a list of all available measures
 
   options for finding the right number of iterations (iterative methods)
    --find-iter=N                  give out statistics every N iterations

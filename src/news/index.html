@@ -13,6 +13,32 @@
 
 <div id="content">
 
+  <a name="3.08"><h2>MyMediaLite 3.08</h2></a>
+    <p>
+    <b>April 15, 2013</b>
+    Version 3.08 of MyMediaLite has been released today.
+    </p>
+    <p>Important changes:
+    <ul>
+      <li>remove obsolete/incomplete/unmaintained functionality</li>
+      <li><tt>SlopeOne</tt>: cut the rating prediction to the allowed range (reported by Simon Dooms)</li>
+      <li><tt>WRMF</tt>: faster training, support incremental updates</li>
+      <li>command-line tools: improved usage information</li>
+      <li><tt>--test-no-ratings</tt>: allow test files without rating column (suggested by Michael Ekstrand)</li>
+      <li>evaluation: shuffle candidate items to avoid biased results for recommenders
+           that return the same score for many items for <tt>--overlap-items</tt> and <tt>--all-items</tt> (reported by Pieter-Jan Perbruggen)</li>
+      <li>fix counting in the <tt>Ratings</tt> data structure, which caused
+           a crash when performing incremental updates for <tt>BiasedMatrixFactorization</tt>
+           with <tt>FrequencyRegularization=true</tt> (reported by Jia Huang)</li>
+    </ul>
+    </p>
+    <p>
+      More details can be found in the <a href="https://github.com/zenogantner/MyMediaLite/blob/master/doc/Changes">Changes file</a>.
+    </p>
+    <p>
+    <a href="[% prefix %]download/index.html">Download it.</a>
+    </p>
+
   <a name="3.07"><h2>MyMediaLite 3.07</h2></a>
     <p>
     <b>February 4, 2013</b>

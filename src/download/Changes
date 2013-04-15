@@ -1,3 +1,43 @@
+3.08	2013-04-13
+	recommenders
+	 - #400: cut ratings to allowed range for SlopeOne (reported by Simon
+           Dooms)
+         - WRMF:
+           - support incremental training
+           - reduce training time by about 50%, by explointing symmmetry and by
+             reducing the number of multiplications
+	 - BPRMF:
+           - avoid duplicate calls to UpdateUser() and UpdateItem() during
+             incremental updates
+           - set item bias to zero in RemoveItem()
+           - move some incremental update functionality to class MF
+	   - fix fold-in learning
+	 - ItemRecommendation.KNN: actually support Weighted property
+         - BPRLinear, BPRSLIM: remove obsolete fast sampling
+         - remove CLiMF, as the implementation was never complete nor working
+         - remove BPRMF_Mapping (incomplete implementation)
+	 - remove ItemAttributeSVM
+        command-line tools
+	 - #399: add --help-measures to all 3 tools
+         - item_recommendation: add usage information for
+           --(load|save)-(user|item)-mapping=FILE
+         - rating_prediction:
+           - do not print complete usage information for invalid command line
+             argument combinations; only describe what is wrong
+           - allow test files without rating column via --test-no-ratings
+             (suggested by Michael Ekstrand)
+	evaluation
+	 - shuffle candidate items to avoid biased results for recommenders
+           that return the same score for many items for --overlap-items and
+           --all-items (reported by Pieter-Jan Perbruggen)
+	data structures
+	 - fix updating count_by_user and count_by_items in Ratings, which caused
+           a crash when performing incremental updates for BiasedMatrixFactorization
+           with FrequencyRegularization=true (reported by Jia Huang)
+        misc
+         - remove namespace AttrToFactor
+
+
 3.07	2013-02-04
 	#378: get rid of group recommendation code
 	recommenders

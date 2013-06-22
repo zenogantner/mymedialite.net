@@ -13,10 +13,32 @@
 
 <div id="content">
 
+  <a name="3.09"><h2>MyMediaLite 3.09</h2></a>
+    <p>
+    <b>June 22, 2013</b>
+    </p>
+    <p>Changes:
+    <ul>
+        <li>command-line tools
+           <ul>
+             <li>make sure that <tt>--online-evaluation</tt> is used together with either
+                 <tt>--test-file</tt>, <tt>--test-ratio</tt>, or <tt>--cross-validation</tt>; make sure it is
+                 not combined with <tt>--find-iter</tt>; make sure that <tt>--find-iter</tt> has
+                 something to evaluate on (based on a report by Lina Weichbrodt)</li>
+             <li>move more <tt>CheckParameter()</tt> code to the common <tt>CommandLineProgram</tt> class</li>
+           </ul></li>
+        <li><a href="https://github.com/zenogantner/MyMediaLite/issues/413">#413</a>:
+            Add missing reference to <tt>System.Data</tt> (Roland Richter)</li>
+        <li>make <tt>MyMediaLite.Random</tt> a true (per-thread) singleton</li>
+    </ul>
+    </p>
+    <p>
+    <a href="[% prefix %]download/index.html">Download it.</a>
+    </p>
+
   <a name="3.08"><h2>MyMediaLite 3.08</h2></a>
     <p>
     <b>April 15, 2013</b>
-    Version 3.08 of MyMediaLite has been released today.
     </p>
     <p>Important changes:
     <ul>
@@ -42,7 +64,6 @@
   <a name="3.07"><h2>MyMediaLite 3.07</h2></a>
     <p>
     <b>February 4, 2013</b>
-    Version 3.07 of MyMediaLite has been released today.
     </p>
     <p>Important changes:
     <ul>
@@ -68,7 +89,6 @@
   <a name="3.06"><h2>MyMediaLite 3.06</h2></a>
     <p>
     <b>December 18, 2012</b>
-    Version 3.06 of MyMediaLite has been released today.
     </p>
     <p>Important changes:
     <ul>
@@ -87,7 +107,6 @@
   <a name="3.05"><h2>MyMediaLite 3.05</h2></a>
     <p>
     <b>October 23, 2012.</b>
-    Version 3.05 of MyMediaLite has been released today.
     </p>
     <p>Important changes:
     <ul>
@@ -107,7 +126,6 @@
   <a name="3.04"><h2>MyMediaLite 3.04</h2></a>
     <p>
     <b>October 14, 2012.</b>
-    Version 3.04 of MyMediaLite has been released.
     </p>
     <p>Important changes:
     <ul>
@@ -128,7 +146,6 @@
   <a name="3.03"><h2>MyMediaLite 3.03</h2></a>
     <p>
     <b>September 9, 2012.</b>
-    Version 3.03 of MyMediaLite has been released.
     </p>
     <p>Improvements and new features:
     <ul>
@@ -169,7 +186,6 @@
   <a name="3.02"><h2>MyMediaLite 3.02</h2></a>
     <p>
     <b>July 23, 2012.</b>
-    Version 3.02 of MyMediaLite has been released.
     </p>
     <p>
       New recommenders:
@@ -207,7 +223,6 @@
   <a name="3.01"><h2>MyMediaLite 3.01</h2></a>
     <p>
     <b>May 31, 2012.</b>
-    Version 3.01 of MyMediaLite has been released.
     </p>
     <p>
       Most prominenty, we have several new rating predictors, all of them variants of asymmetric factor models (AFMs).
@@ -217,7 +232,8 @@
     <p>
       Existing recommender have received significant improvements:
       <ul>
-        <li>WRMF: support out-of-the-box multi-core learning (#233)</li>
+        <li>WRMF: support out-of-the-box multi-core learning
+            (<a href="https://github.com/zenogantner/MyMediaLite/issues/233">#233</a>)</li>
         <li>BiasedMatrixFactorization: 'naive' parallelization</li>
         <li>(Sigmoid)SVDPlusPlus, SigmoidItemAsymmetricFactorModel:
             take the ratings that have to be predicted into account (transductive learning)</li>
@@ -249,7 +265,6 @@
   <a name="3.0"><h2>MyMediaLite 3.0</h2></a>  
     <p>
     <b>April 5, 2012.</b>
-    Version 3.0 of MyMediaLite has been released.
     </p>
     <p>
     Highlights of this version:
@@ -274,7 +289,6 @@
   <a name="2.99"><h2>MyMediaLite 2.99</h2></a>  
     <p>
     <b>March 2, 2012.</b>
-    Version 2.99 of MyMediaLite has been released.
     </p>
     <p>
     Highlights of this version:
@@ -285,8 +299,7 @@
       <li>merge <tt>LogisticRegressionMatrixFactorization</tt> and
           <tt>MultiCoreMatrixFactorization</tt> into <tt>BiasedMatrixFactorization</tt></li>
       <li>... plus much, much more: See the <a href="[% prefix %]download/Changes">Changes file</a> for details
-          and further improvements.
-</li>
+          and further improvements.</li>
     </ul>
     </p>
 
@@ -305,7 +318,6 @@
   <a name="2.03"><h2>MyMediaLite 2.03</h2></a>  
     <p>
     <b>January 14, 2012.</b>
-    Version 2.03 of MyMediaLite has been released.
     </p>
     <p>
     Some highlights of this version:
@@ -334,7 +346,6 @@
   <a name="2.02"><h2>MyMediaLite 2.02</h2></a>  
     <p>
     <b>November 29, 2011.</b>
-    Version 2.02 of MyMediaLite has been released.
     </p>
     <p>
     <ul>
@@ -383,7 +394,6 @@
   <a name="2.01"><h2>MyMediaLite 2.01</h2></a>  
     <p>
     <b>November 13, 2011.</b>
-    Version 2.01 of MyMediaLite has been released.
     </p>
     <p>
 	This release fixes a crash of the item recommendation tool.
@@ -398,7 +408,6 @@
   <a name="2.0"><h2>MyMediaLite 2.0</h2></a>  
     <p>
     <b>November 10, 2011.</b>
-    Version 2.0 of MyMediaLite has been released.
     </p>
     <p>
     New features:
@@ -446,7 +455,6 @@
   <a name="1.99"><h2>MyMediaLite 1.99</h2></a>  
     <p>
     <b>October 8, 2011.</b>
-    Version 1.99 of MyMediaLite has been released.
     </p>
     <p>There are many major upgrades:
     <ul>
@@ -483,7 +491,7 @@
   <a name="1.05"><h2>MyMediaLite 1.05</h2></a>  
     <p>
     <b>September 1, 2011.</b>
-    Version 1.05 of MyMediaLite has been released. Changes since the last release:
+    Changes since the last release:
     <ul>
       <li>API changes:
           <ul>
@@ -509,7 +517,7 @@
   <a name="1.04"><h2>MyMediaLite 1.04</h2></a>  
     <p>
     <b>August 3, 2011.</b>
-    Version 1.04 of MyMediaLite has been released. New features:
+    New features:
     <ul>
       <li>Simplified API for item recommendation and matrix factorization: nicer class names (<tt>Eval.Items</tt> and <tt>Eval.Ratings</tt>).</li>
       <li>Merge [% INCLUDE link link='mae' %] optimization as an option into the <tt>BiasedMatrixFactorization</tt> recommender, instead
@@ -545,7 +553,7 @@
   <a name="1.03"><h2>MyMediaLite 1.03</h2></a>  
     <p>
     <b>June 22, 2011.</b>
-    Version 1.03 of MyMediaLite has been released. There are many new features:
+    New features:
     <ul>
       <li>A prototype SOAP web service for rating prediction.
           We plan to offer most of MyMediaLite's functionality using RESTful services in the future.</li>
@@ -570,7 +578,7 @@
   <a name="1.02"><h2>MyMediaLite 1.02</h2></a>  
     <p>
     <b>May 24, 2011.</b>
-    Version 1.02 of MyMediaLite has been released. This is mostly a bugfix release:
+    This is mostly a bugfix release:
     <ul>
       <li>Fixed broken save/load mechanism for two recommenders.</li>
       <li>Fixed the Doxygen documentation, which was configured wrongly.</li>
@@ -598,7 +606,7 @@
   <a name="1.0"><h2>MyMediaLite 1.0</h2></a>  
     <p>
     <b>March 19, 2011.</b>
-    Version 1.0 has been released. It features major changes in the
+    Version 1.0 features major changes in the
     API and in the way the ratings/user feedback is stored internally.
     This makes it feasible to load big datasets like the ones from
     <a href="http://kddcup.yahoo.com">KDD Cup 2011</a> into main memory.
@@ -613,7 +621,7 @@
   <a name="0.11"><h2>MyMediaLite 0.11</h2></a>  
     <p>
     <b>March 4, 2011.</b>
-    Version 0.11 has been released. It features a simple Gtk#-based demo of some
+    This version contains a simple Gtk#-based demo of some
     of the library's functionality. Feedback and improvements are very welcome,
     as we are not GUI specialists (yet).
     There have been the following improvements:
@@ -669,7 +677,7 @@
     You can now <a href="http://twitter.com/mymedialite">follow us on Twitter (<code>@mymedialite</code>)</a> to get the latest updates on MyMediaLite.
   </p>
 
-  <a name="0.09"><h2>MyMediaLite 0.09 has been released</h2></a>
+  <a name="0.09"><h2>MyMediaLite 0.09</h2></a>
   <p>
     <b>January 12, 2011.</b>
     As always, this is the best version of MyMediaLite ever.

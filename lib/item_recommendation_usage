@@ -1,4 +1,4 @@
-MyMediaLite item recommendation from positive-only feedback 3.09
+MyMediaLite item recommendation from positive-only feedback 3.10
 
  usage:   item_recommendation --training-file=FILE --recommender=METHOD [OPTIONS]
 

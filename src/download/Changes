@@ -1,3 +1,28 @@
+3.10	2013-09-23
+	recommenders
+         - BPRMF: init random number generator in LoadModel() (pull request by
+           KwangSeob Kim)
+	command-line tools
+	 - write out final predictions after last iteration with --find-iter
+           (reported by Tobias Lang)
+         - item recommendation: prevent NPE with --find-iter when --test-file
+           nor test-ratio is specified (reported by Tobias Lang)
+	 - rating prediction: prevent NPE when --test-file=FILE not specified
+           (reported by Roberto Abalde)
+         - support writing predictions to stdout on Unix (requested by GitHub
+           user jkleint)
+	data structures
+         - fix bug in SparseMatrix.Resize() (reported by GitHub user
+           guoguibing)
+        IO
+	 - RatingData.cs: add missing param ignore_first_line to method call
+           (reported by GitHub user guoguibing)
+	evaluation
+	 - avoid null reference for cold-start users (pull request by KwangSeob
+           Kim)
+         - #425: Randomize ordering of candidate_items in ItemRecommender
+           evaluations (reported by Chris Newell)
+
 3.09	2013-06-22
 	command-line tools
          - make sure that --online-evaluation is used together with either

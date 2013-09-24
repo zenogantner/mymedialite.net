@@ -1,4 +1,4 @@
-MyMediaLite rating prediction 3.09
+MyMediaLite rating prediction 3.10
 
  usage:  rating_prediction --training-file=FILE --recommender=METHOD [OPTIONS]
 

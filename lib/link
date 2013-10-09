@@ -35,7 +35,6 @@
      apprecommender => { url => 'https://github.com/tassia/AppRecommender',                   title => 'AppRecommender' }
      wooflix       => { url => 'http://gustavonarea.net/blog/posts/korens-svd-python-implementation/', title => 'wooflix' }
      cwis          => { url => 'http://scout.wisc.edu/Projects/CWIS/'                         title => 'Collection Workflow Integration System' }
-     filmaster     => { url => 'https://bitbucket.org/filmaster/filmaster-test/src'           title => 'Filmaster' }
      mloss         => { url => 'http://mloss.org',                                            title => 'mloss.org' }
      graphlab      => { url => 'http://www.graphlab.ml.cmu.edu/',                title => 'GraphLab' }
      graphlabcf    => { url => 'http://www.graphlab.ml.cmu.edu/pmf.html',        title => 'GraphLab collaborative filtering library' }

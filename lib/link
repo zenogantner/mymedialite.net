@@ -48,7 +48,6 @@
      libsvmdotnet  => { url => 'http://www.matthewajohnson.org/software/svm.html', title => 'SVM.NET' }
      mymediaframework => { url => 'http://mymediaproject.codeplex.com/',         title => 'MyMedia Framework' }
      ucmedia       => { url => 'http://www.mymediaproject.org/UCM.aspx',         title => 'User Centric Media Cluster' }
-     email         => { url => 'mailto:mymedialite@gmail.com',                   title => 'mymedialite@gmail.com' }
      source_code   => { url => 'https://github.com/zenogantner/MyMediaLite',     title => 'https://github.com/zenogantner/MyMediaLite' }
      ironpython    => { url => 'http://ironpython.net/'                          title => 'IronPython' }
      ironruby      => { url => 'http://ironruby.net/'                            title => 'IronRuby' }

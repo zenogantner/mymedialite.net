@@ -1,4 +1,4 @@
-MyMediaLite item recommendation from positive-only feedback 3.10
+MyMediaLite Item Recommendation from Positive-Only Feedback 3.11
 
  usage:   item_recommendation --training-file=FILE --recommender=METHOD [OPTIONS]
 
@@ -27,9 +27,6 @@ MyMediaLite item recommendation from positive-only feedback 3.10
        supports --find-iter=N, --online-evaluation
    - WeightedBPRMF num_factors=10 bias_reg=0 reg_u=0.0025 reg_i=0.0025 reg_j=0.00025 num_iter=30 learn_rate=0.05
        supports --find-iter=N, --online-evaluation
-   - BPRLinear reg=0.015 num_iter=10 learn_rate=0.05
-       needs --item-attributes=FILE
-       supports --find-iter=N
    - MostPopularByAttributes
        needs --item-attributes=FILE
    - BPRSLIM reg_i=0.0025 reg_j=0.00025 num_iter=15 learn_rate=0.05 uniform_user_sampling=True with_replacement=False update_j=True

@@ -1,3 +1,20 @@
+3.11	2015-12-31
+	recommenders
+	 - fix incremental update bug (user vs. item ID confusion) for item
+	   recommendation ItemKNN (pull request by Jessica Tölke)
+         - get rid of recommender BPRLinear
+         - mark (Weighted)Ensemble, (BiPolar)SlopeOne, GridSearch, CoClustering,
+           FactorWiseMatrixFactorization, NaiveBayes as obsolete
+	correlations
+	 - #453: add RatingCosine (Nicolas Hug)
+	misc
+	 - #440: fix MovieLens 10M URL (pull request by Greg Najda)
+	 - #448: fix misleading documentation in Eval.CandidateItems (Chris
+	   Newell)
+         - mark SequentialDiversification as obsolete
+         - remove GUI demo
+	 - remove Perl6, Python, and Ruby examples
+
 3.10	2013-09-23
 	recommenders
          - BPRMF: init random number generator in LoadModel() (pull request by
